@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Hello React</title>
+    <link href="./external/bootstrap/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<style>
+		.header {
+		 position: relative; /* Относительное позиционирование */
+		 background: #ffebe9; /* Цвет фона */
+		 height: 75px; /* Высота блока */
+		}
+		.footer {
+		 position: relative; /* Относительное позиционирование */
+		 background: #f2ffe8; /* Цвет фона */
+		 height: 75px; /* Высота блока */
+		}
+		.body {
+		 position: relative; /* Относительное позиционирование */
+		 background: hsl(266, 100%, 95%); /* Цвет фона */
+		 height: 200px; /* Высота блока */
+		 border-top: 1px solid;
+		 border-bottom: 1px solid;
+		}
+	   </style>
+</head>
+<body>
+
+	<div id="header" class="header">
+		<div id="announcment"></div>
+	</div>
+	<div id="body" class="body">
+		<div id="register"></div>
+	</div>
+	<div id="footer" class="footer">
+		<div id="timer"></div>
+	</div>
+	
+	<script crossorigin src="./external/react@17/umd/react.production.min.js"></script>
+	<script crossorigin src="./external/react-dom@17/umd/react-dom.production.min.js"></script>
+	<script src="./external/@babel/standalone/babel.min.js"></script>
+
+    <!-- <script src="./external/bootstrap/bootstrap.bundle.min.js" crossorigin="anonymous"></script> -->
+	
+	<script type="text/babel" src="header.jsx"></script>
+	<script type="text/babel" src="body.jsx"></script>
+	<script type="text/babel" src="footer.jsx"></script>
+</body>
+</html>
