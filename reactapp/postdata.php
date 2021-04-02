@@ -1,6 +1,6 @@
 <?php
 
-// Не тестировал, но по идее должно работать!
+// fetch не тестировал, но по идее должно работать!
 
 function pdoSet($allowed, &$values, $source = array()) {
     $set = '';
@@ -16,9 +16,9 @@ function pdoSet($allowed, &$values, $source = array()) {
 }
 
 $host = '127.0.0.1';
-$db   = 'test';
-$user = 'test';
-$pass = 'test';
+$db   = 'react';
+$user = 'react';
+$pass = 'react';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -35,9 +35,9 @@ try {
 }
 
 $values = [
-    uname => $_POST['uname'],
-    umail =>  $_POST['umail'],
-    upass =>  $_POST['upass']
+    name => htmlspecialchars($_POST['name']),
+    mail =>  htmlspecialchars($_POST['mail']),
+    pass =>  htmlspecialchars($_POST['pass'])
 ];
 
 $allowed = array("name", "email", "password"); // MD5: хранить пароль в явном виде это круто! 
